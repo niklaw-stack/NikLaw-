@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marjorie Kennedy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">Marjorie Kennedy</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#fees">Fees</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#book" class="nav-book-btn">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- BOOKING MODAL -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">×</button>
+      <div id="modalContent">
+        <h2 class="modal-title">Book a Session</h2>
+        <p class="modal-sub">Complete the form and Marjorie will confirm your appointment within 24 hours.</p>
+        <form class="modal-form" onsubmit="submitModal(event)">
+          <div class="form-row">
+            <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane" required/></div>
+            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith" required/></div>
+          </div>
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="jane@example.com" required/></div>
+          <div class="form-group"><label>Phone</label><input type="tel" placeholder="(555) 000-0000"/></div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Service</label>
+              <select required>
+                <option value="" disabled selected>Select…</option>
+                <option>Initial Consultation (Free)</option>
+                <option>Individual Counseling</option>
+                <option>Extended Session</option>
+                <option>Wellness Coaching Package</option>
+                <option>Life Transitions</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Preferred Date</label><input type="date"/></div>
+          </div>
+          <div class="form-group"><label>Notes (optional)</label><textarea placeholder="Anything you'd like to share…"></textarea></div>
+          <button type="submit" class="btn btn-book">Request Appointment</button>
+        </form>
+      </div>
+      <div class="modal-success" id="modalSuccess">
+        <div class="check">🌿</div>
+        <h3>Request Received</h3>
+        <p>Thank you for reaching out. Marjorie will be in touch within 24 hours to confirm your appointment.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-text fade-up">
+        <p class="hero-eyebrow">Welcome</p>
+        <h1 class="hero-name">Marjorie<br><em>Kennedy</em></h1>
+        <p class="hero-tagline">Guiding you toward clarity, balance, and a life that feels truly yours. Together, we navigate the waters of change with intention and grace.</p>
+        <button class="btn" onclick="openModal()">Book a Session</button>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
+      <div class="hero-photo-wrap fade-up" style="transition-delay:0.15s">
+        <div class="hero-circle"></div>
+        <img src="M_Profile_1_.png" alt="Marjorie Kennedy" class="hero-photo"/>
+        <img src="Water_Background_1.jpg" alt="" class="hero-water" aria-hidden="true"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,35 C240,60 480,8 720,35 C960,60 1200,8 1440,35 L1440,60 L0,60 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="fade-up">
+          <img src="M_Profile_3.png" alt="Marjorie Kennedy" class="about-photo"/>
+          <img src="Water_Background_1.jpg" alt="" class="water-strip" aria-hidden="true"/>
+        </div>
+        <div class="about-text fade-up" style="transition-delay:0.15s">
+          <p class="section-label">About</p>
+          <h2 class="section-title">Rooted in empathy,<br>driven by purpose</h2>
+          <p>Marjorie Kennedy brings warmth, wisdom, and deep professional expertise to every client relationship. With years of experience working alongside individuals and families, she is committed to helping people find their footing through life's most meaningful transitions.</p>
+          <p>Her approach blends evidence-based methods with genuine human connection — creating a space that is both challenging and deeply supportive. Whether you are facing a crossroads, seeking growth, or simply searching for greater peace, Marjorie meets you exactly where you are.</p>
+          <p>Outside of her practice, Marjorie finds renewal in nature, long walks by the water, and the quiet moments that remind us what truly matters.</p>
+          <button class="btn" style="margin-top:0.5rem" onclick="openModal()">Book a Session</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE -->
+  <div class="wave-divider" style="transform:rotate(180deg); background:#ffffff;">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,35 C240,60 480,8 720,35 C960,60 1200,8 1440,35 L1440,60 L0,60 Z" fill="#f8f8f6"/>
+    </svg>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-inner">
+      <p class="section-label fade-up">What I Offer</p>
+      <h2 class="section-title fade-up">Services</h2>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-icon">🌿</div>
+          <h3>Individual Counseling</h3>
+          <p>One-on-one sessions tailored to your unique needs, goals, and pace. A confidential space to explore, heal, and grow at every stage of life.</p>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.1s">
+          <div class="service-icon">🌊</div>
+          <h3>Life Transitions</h3>
+          <p>Expert guidance through career changes, relationship shifts, loss, and other pivotal moments that call for both courage and clarity.</p>
+        </div>
+        <div class="service-card fade-up" style="transition-delay:0.2s">
+          <div class="service-icon">✨</div>
+          <h3>Wellness Coaching</h3>
+          <p>A holistic approach to well-being that integrates mindset, lifestyle, and intentional living — helping you show up fully in every area of your life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE -->
+  <div class="wave-divider" style="background:#f8f8f6;">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,35 C240,60 480,8 720,35 C960,60 1200,8 1440,35 L1440,60 L0,60 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+
+  <!-- APPROACH -->
+  <section id="approach">
+    <div class="section-inner">
+      <div class="approach-layout">
+        <div class="fade-up">
+          <img src="M_Profile_1_.png" alt="Marjorie Kennedy" class="approach-main-img"/>
+          <img src="Water_Background_1.jpg" alt="" class="approach-water-img" aria-hidden="true"/>
+        </div>
+        <div class="fade-up" style="transition-delay:0.15s">
+          <p class="section-label">My Philosophy</p>
+          <h2 class="section-title">My Approach</h2>
+          <div class="accordion">
+            <div class="accordion-item open">
+              <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                <span class="accordion-trigger-label">Collaborative &amp; Client-Centered</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-body"><div class="accordion-body-inner">
+                Every person's journey is unique. I work alongside you — not ahead of you — listening carefully and tailoring each session to what you bring. You are the expert on your own life; my role is to help you access the wisdom already within you.
+              </div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                <span class="accordion-trigger-label">Evidence-Based Methods</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-body"><div class="accordion-body-inner">
+                I draw from research-supported frameworks including Cognitive Behavioral Therapy (CBT), mindfulness-based approaches, and attachment theory — grounding our work in what the evidence shows is most effective for your goals.
+              </div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                <span class="accordion-trigger-label">Holistic &amp; Whole-Person Focus</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-body"><div class="accordion-body-inner">
+                Mental, emotional, and physical well-being are deeply interconnected. Our sessions attend to the full picture — your relationships, lifestyle, values, and sense of purpose — not just the presenting concern.
+              </div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                <span class="accordion-trigger-label">Warmth, Safety &amp; Confidentiality</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-body"><div class="accordion-body-inner">
+                Creating a genuinely safe space is foundational to everything I do. You will always be met with warmth, honesty, and respect — and what you share stays here.
+              </div></div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-trigger" onclick="toggleAccordion(this)">
+                <span class="accordion-trigger-label">Growth at Your Own Pace</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-body"><div class="accordion-body-inner">
+                There is no fixed timeline for growth. We move at a pace that honors both your readiness and your resilience. Progress is celebrated at every stage — even the small, quiet shifts.
+              </div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEES -->
+  <section id="fees">
+    <div class="section-inner">
+      <div class="fees-layout">
+        <div class="fees-intro fade-up">
+          <p class="section-label">Transparency</p>
+          <h2 class="section-title">Fees &amp;<br>Insurance</h2>
+          <p>I believe financial clarity is part of a respectful therapeutic relationship. Below you'll find details on session rates, formats, and insurance. If cost is a concern, please reach out — I am committed to making support accessible.</p>
+          <p>A complimentary 15-minute phone consultation is available to all new clients so we can explore fit before you commit.</p>
+          <img src="Water_Background_1.jpg" alt="" class="fees-water" aria-hidden="true"/>
+        </div>
+        <div class="fees-accordion fade-up" style="transition-delay:0.15s">
+          <div class="fee-item open">
+            <button class="fee-trigger" onclick="toggleFee(this)">
+              <div class="fee-trigger-left">
+                <span class="fee-name">Initial Consultation</span>
+                <span class="fee-rate">Free · 15 minutes · Phone</span>
+              </div>
+              <span class="fee-icon">+</span>
+            </button>
+            <div class="fee-body"><div class="fee-body-inner">
+              A brief, no-obligation call to discuss what brings you in, answer your questions, and determine whether we might be a good fit. No pressure, no commitment required.
+            </div></div>
+          </div>
+          <div class="fee-item">
+            <button class="fee-trigger" onclick="toggleFee(this)">
+              <div class="fee-trigger-left">
+                <span class="fee-name">Individual Counseling</span>
+                <span class="fee-rate">$175 · 50 minutes · In-person or Virtual</span>
+              </div>
+              <span class="fee-icon">+</span>
+            </button>
+            <div class="fee-body"><div class="fee-body-inner">
+              Standard weekly or bi-weekly sessions. Available in-person at my New York office or via secure telehealth, whichever suits you best.
+            </div></div>
+          </div>
+          <div class="fee-item">
+            <button class="fee-trigger" onclick="toggleFee(this)">
+              <div class="fee-trigger-left">
+                <span class="fee-name">Extended Session</span>
+                <span class="fee-rate">$240 · 80 minutes · In-person or Virtual</span>
+              </div>
+              <span class="fee-icon">+</span>
+            </button>
+            <div class="fee-body"><div class="fee-body-inner">
+              For those who prefer deeper, less frequent sessions. Extended sessions allow more time for exploration and integration of significant transitions.
+            </div></div>
+          </div>
+          <div class="fee-item">
+            <button class="fee-trigger" onclick="toggleFee(this)">
+              <div class="fee-trigger-left">
+                <span class="fee-name">Wellness Coaching Package</span>
+                <span class="fee-rate">$600 · 4 sessions · Virtual</span>
+              </div>
+              <span class="fee-icon">+</span>
+            </button>
+            <div class="fee-body"><div class="fee-body-inner">
+              A structured four-session package for clients seeking focused support around lifestyle, goals, and well-being. Coaching is distinct from therapy and does not require a diagnosis.
+            </div></div>
+          </div>
+          <div class="fee-item">
+            <button class="fee-trigger" onclick="toggleFee(this)">
+              <div class="fee-trigger-left">
+                <span class="fee-name">Insurance &amp; Sliding Scale</span>
+                <span class="fee-rate">Out-of-network · Sliding scale available</span>
+              </div>
+              <span class="fee-icon">+</span>
+            </button>
+            <div class="fee-body"><div class="fee-body-inner">
+              I am an out-of-network provider. Many clients receive reimbursement through their insurance — I provide a superbill upon request. A limited number of sliding-scale spots are available for those with financial need. Please ask.
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK APPOINTMENT -->
+  <section id="book">
+    <img src="Water_Background_1.jpg" alt="" class="book-water-bg" aria-hidden="true"/>
+    <div class="section-inner">
+      <p class="section-label fade-up">Schedule</p>
+      <h2 class="section-title fade-up">Book an Appointment</h2>
+      <p class="book-subtitle fade-up">Ready to take the first step? Fill out the form and Marjorie will reach out within 24 hours to confirm your time.</p>
+      <div class="book-grid">
+        <form class="book-form fade-up" onsubmit="submitBook(event)">
+          <div class="form-row">
+            <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane" required/></div>
+            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith" required/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Email</label><input type="email" placeholder="jane@example.com" required/></div>
+            <div class="form-group"><label>Phone</label><input type="tel" placeholder="(555) 000-0000"/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Service</label>
+              <select required>
+                <option value="" disabled selected>Select…</option>
+                <option>Initial Consultation (Free)</option>
+                <option>Individual Counseling</option>
+                <option>Extended Session</option>
+                <option>Wellness Coaching Package</option>
+                <option>Life Transitions</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Format</label>
+              <select>
+                <option value="" disabled selected>Select…</option>
+                <option>In-Person</option>
+                <option>Virtual / Telehealth</option>
+                <option>No preference</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Preferred Date</label><input type="date"/></div>
+            <div class="form-group">
+              <label>Preferred Time</label>
+              <select>
+                <option value="" disabled selected>Select…</option>
+                <option>Morning (9am – 12pm)</option>
+                <option>Afternoon (12pm – 4pm)</option>
+                <option>Evening (4pm – 7pm)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>Notes (optional)</label><textarea placeholder="What brings you in, preferred days, or any questions…"></textarea></div>
+          <button type="submit" class="btn-book" id="bookBtn">Request Appointment</button>
+          <p class="book-success" id="bookSuccess">✓ Thank you! Marjorie will be in touch within 24 hours.</p>
+        </form>
+        <div class="book-info fade-up" style="transition-delay:0.15s">
+          <h3>What to expect</h3>
+          <p>After submitting your request, Marjorie will personally review it and reach out to confirm a time. All new clients receive a free 15-minute phone consultation before their first session.</p>
+          <div class="book-detail">
+            <span class="book-detail-icon">📍</span>
+            <div><strong>Location</strong>In-person in New York, NY. Virtual sessions available nationwide.</div>
+          </div>
+          <div class="book-detail">
+            <span class="book-detail-icon">⏱</span>
+            <div><strong>Session Length</strong>Standard 50 min · Extended 80 min.</div>
+          </div>
+          <div class="book-detail">
+            <span class="book-detail-icon">🔒</span>
+            <div><strong>Confidential</strong>All sessions and communications are strictly confidential and HIPAA compliant.</div>
+          </div>
+          <div class="book-detail">
+            <span class="book-detail-icon">💬</span>
+            <div><strong>Free Consultation</strong>New clients may schedule a no-obligation 15-minute call first.</div>
+          </div>
+          <div class="book-detail">
+            <span class="book-detail-icon">✉</span>
+            <div><strong>Prefer to email?</strong>hello@marjoriekennedy.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <p class="section-label fade-up">Reach Out</p>
+      <h2 class="section-title fade-up">Let's Connect</h2>
+      <div class="contact-grid">
+        <div class="contact-info fade-up">
+          <p>Taking the first step is often the hardest part. Whether you have questions or are ready to begin, Marjorie would love to hear from you.</p>
+          <div class="contact-detail"><span>✉</span><span>hello@marjoriekennedy.com</span></div>
+          <div class="contact-detail"><span>📞</span><span>(555) 012-3456</span></div>
+          <div class="contact-detail"><span>📍</span><span>New York, NY</span></div>
+          <img src="Water_Background_1.jpg" alt="" class="contact-water" aria-hidden="true"/>
+        </div>
+        <div class="fade-up" style="transition-delay:0.15s">
+          <form class="contact-form" onsubmit="return false;">
+            <div class="form-group"><label>Your Name</label><input type="text" placeholder="Jane Smith"/></div>
+            <div class="form-group"><label>Email Address</label><input type="email" placeholder="jane@example.com"/></div>
+            <div class="form-group"><label>Message</label><textarea placeholder="How can I help you?"></textarea></div>
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Marjorie Kennedy</div>
+    <div class="footer-copy">© 2026 Marjorie Kennedy · All rights reserved</div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
