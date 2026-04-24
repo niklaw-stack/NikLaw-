@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insights — Law Offices of Nikitas E. Nicolakis</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --navy: #0d1b2a; --gold: #b8965a; --gold-light: #d4b07a; --cream: #f5f1eb; --white: #ffffff; --light-gray: #e8e4de; --text: #1a1a2e; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--text); font-weight: 300; line-height: 1.7; }
+  nav { background: var(--navy); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(184,150,90,0.3); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; color: var(--white); font-size: 1.15rem; font-weight: 400; letter-spacing: 0.04em; text-decoration: none; line-height: 1.3; }
+  .nav-logo span { color: var(--gold); display: block; font-size: 0.7rem; font-family: 'Jost', sans-serif; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 400; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+  .hero { background: var(--navy); color: var(--white); padding: 70px 2rem 60px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 50%, rgba(184,150,90,0.08) 0%, transparent 70%); }
+  .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; font-weight: 500; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 4vw, 3.6rem); font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; }
+  .hero h1 em { font-style: italic; color: var(--gold-light); }
+  .hero p { max-width: 560px; margin: 0 auto; color: rgba(255,255,255,0.72); font-size: 1rem; line-height: 1.8; }
+  .hero-rule { width: 48px; height: 1px; background: var(--gold); margin: 0 auto 2rem; }
+  .section { padding: 80px 2rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 1rem; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; color: var(--navy); line-height: 1.2; margin-bottom: 1.5rem; }
+  .section-title em { font-style: italic; }
+  .divider { width: 40px; height: 1px; background: var(--gold); margin-bottom: 2rem; }
+  .insights-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem; }
+  .insight-card { background: white; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+  .insight-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+  .insight-img { height: 180px; background: var(--navy); display: flex; align-items: center; justify-content: center; }
+  .insight-img-text { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: rgba(184,150,90,0.6); font-style: italic; padding: 1.5rem; text-align: center; line-height: 1.4; }
+  .insight-body { padding: 1.5rem; }
+  .insight-tag { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.6rem; }
+  .insight-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 400; color: var(--navy); line-height: 1.4; margin-bottom: 0.7rem; }
+  .insight-excerpt { font-size: 0.88rem; color: #666; line-height: 1.7; margin-bottom: 1rem; }
+  .insight-date { font-size: 0.78rem; color: #999; letter-spacing: 0.05em; }
+  .insights-note { background: var(--navy); color: rgba(255,255,255,0.7); padding: 2rem 3rem; margin-top: 3rem; font-size: 0.9rem; line-height: 1.8; border-left: 3px solid var(--gold); }
+  .insights-note strong { color: #d4b07a; font-weight: 500; }
+  footer { background: var(--navy); color: rgba(255,255,255,0.5); padding: 2.5rem 2rem; text-align: center; font-size: 0.78rem; border-top: 1px solid rgba(184,150,90,0.2); }
+  footer a { color: var(--gold); text-decoration: none; }
+  @media (max-width: 768px) { .nav-links { gap: 1.2rem; } .nav-links a { font-size: 0.65rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="about.html">Law Offices of Nikitas E. Nicolakis<span>Attorney at Law</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="professionals.html">Professionals</a></li>
+      <li><a href="insights.html" class="active">Insights</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow">News &amp; Commentary</div>
+  <h1>Insights on <em>Intellectual Property</em></h1>
+  <div class="hero-rule"></div>
+  <p>Analysis, updates, and commentary on patent law, trademark, copyright, and the evolving IP landscape.</p>
+</div>
+
+<div class="section" style="background: white;">
+  <div class="section-inner">
+    <div class="section-label">Recent Articles</div>
+    <h2 class="section-title">From the <em>Desk of the Firm</em></h2>
+    <div class="divider"></div>
+
+    <div class="insights-grid">
+
+      <div class="insight-card">
+        <div class="insight-img"><div class="insight-img-text">AI &amp; Patent Inventorship</div></div>
+        <div class="insight-body">
+          <div class="insight-tag">Patent Law</div>
+          <div class="insight-title">Who Owns an AI-Generated Invention? The Evolving Question of Inventorship</div>
+          <div class="insight-excerpt">Courts and the USPTO continue to grapple with whether artificial intelligence systems can qualify as inventors under the Patent Act — and what that means for patent holders.</div>
+          <div class="insight-date">Coming Soon</div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-img"><div class="insight-img-text">Foreign Filing Strategy</div></div>
+        <div class="insight-body">
+          <div class="insight-tag">International IP</div>
+          <div class="insight-title">Strategic Timing in International Patent Prosecution: Key Considerations</div>
+          <div class="insight-excerpt">Navigating PCT deadlines, national phase entries, and international filing strategies requires careful planning. A misstep can mean permanent loss of rights in key markets.</div>
+          <div class="insight-date">Coming Soon</div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-img"><div class="insight-img-text">Trade Secret Protection</div></div>
+        <div class="insight-body">
+          <div class="insight-tag">Trade Secrets</div>
+          <div class="insight-title">Trade Secrets vs. Patents: Choosing the Right Protection for Your Innovation</div>
+          <div class="insight-excerpt">For many inventions, the decision between patent protection and trade secret protection is a strategic one with long-term consequences. Here's how to think through the tradeoffs.</div>
+          <div class="insight-date">Coming Soon</div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-img"><div class="insight-img-text">USPTO Practice Updates</div></div>
+        <div class="insight-body">
+          <div class="insight-tag">Patent Prosecution</div>
+          <div class="insight-title">Recent USPTO Guidance on Alice/Mayo: What Practitioners Need to Know</div>
+          <div class="insight-excerpt">The line between patent-eligible and patent-ineligible subject matter remains one of the most contested areas of U.S. patent law. Recent guidance offers some clarity — and new questions.</div>
+          <div class="insight-date">Coming Soon</div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-img"><div class="insight-img-text">Startup IP Strategy</div></div>
+        <div class="insight-body">
+          <div class="insight-tag">Business Strategy</div>
+          <div class="insight-title">Building an IP Portfolio from Day One: Advice for Early-Stage Companies</div>
+          <div class="insight-excerpt">For startups, intellectual property is often the most valuable asset. A proactive strategy — established early — can be the difference between a defensible market position and an exposed one.</div>
+          <div class="insight-date">Coming Soon</div>
+        </div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-img"><div class="insight-img-text">Trademark Enforcement</div></div>
+        <div class="insight-body">
+          <div class="insight-tag">Trademark</div>
+          <div class="insight-title">When to Send a Cease and Desist — and When to Hold Back</div>
+          <div class="insight-excerpt">Trademark enforcement requires a calibrated approach. An aggressive C&amp;D can escalate into costly litigation; a passive posture risks abandonment claims. Here's how to strike the right balance.</div>
+          <div class="insight-date">Coming Soon</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="insights-note">
+      <strong>Note:</strong> This Insights section is ready to be populated with your articles, case updates, and IP commentary. To add a new article, duplicate one of the insight-card blocks above and update the tag, title, excerpt, and date. Each article can also link to its own dedicated HTML page for the full text.
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Law Offices of Nikitas E. Nicolakis &nbsp;|&nbsp; Attorney Advertising &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Disclaimer</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professionals — Law Offices of Nikitas E. Nicolakis</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --navy: #0d1b2a; --gold: #b8965a; --gold-light: #d4b07a; --cream: #f5f1eb; --white: #ffffff; --light-gray: #e8e4de; --text: #1a1a2e; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--text); font-weight: 300; line-height: 1.7; }
+  nav { background: var(--navy); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(184,150,90,0.3); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; color: var(--white); font-size: 1.15rem; font-weight: 400; letter-spacing: 0.04em; text-decoration: none; line-height: 1.3; }
+  .nav-logo span { color: var(--gold); display: block; font-size: 0.7rem; font-family: 'Jost', sans-serif; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 400; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+  .hero { background: var(--navy); color: var(--white); padding: 70px 2rem 60px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 50%, rgba(184,150,90,0.08) 0%, transparent 70%); }
+  .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; font-weight: 500; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 4vw, 3.6rem); font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; }
+  .hero h1 em { font-style: italic; color: var(--gold-light); }
+  .hero p { max-width: 560px; margin: 0 auto; color: rgba(255,255,255,0.72); font-size: 1rem; line-height: 1.8; }
+  .hero-rule { width: 48px; height: 1px; background: var(--gold); margin: 0 auto 2rem; }
+  .section { padding: 80px 2rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .prof-card { display: grid; grid-template-columns: 260px 1fr; gap: 4rem; background: white; padding: 3rem; border-left: 3px solid var(--gold); box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+  .prof-avatar { width: 100%; aspect-ratio: 3/4; background: var(--navy); display: flex; align-items: center; justify-content: center; }
+  .prof-initials { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; color: var(--gold); font-weight: 300; letter-spacing: 0.05em; }
+  .prof-name { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color: var(--navy); margin-bottom: 0.3rem; }
+  .prof-title { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 1.5rem; }
+  .prof-rule { width: 32px; height: 1px; background: var(--gold); margin-bottom: 1.5rem; }
+  .prof-bio { font-size: 0.95rem; color: #444; line-height: 1.9; margin-bottom: 1rem; }
+  .credential-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem; }
+  .credential-label { font-size: 0.63rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.6rem; }
+  .credential-item { font-size: 0.88rem; color: #555; padding: 0.3rem 0; border-bottom: 1px solid var(--light-gray); }
+  footer { background: var(--navy); color: rgba(255,255,255,0.5); padding: 2.5rem 2rem; text-align: center; font-size: 0.78rem; border-top: 1px solid rgba(184,150,90,0.2); }
+  footer a { color: var(--gold); text-decoration: none; }
+  @media (max-width: 768px) { .prof-card { grid-template-columns: 1fr; } .credential-grid { grid-template-columns: 1fr; } .nav-links { gap: 1.2rem; } .nav-links a { font-size: 0.65rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="about.html">Law Offices of Nikitas E. Nicolakis<span>Attorney at Law</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="professionals.html" class="active">Professionals</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow">The Team</div>
+  <h1>The Professional<br><em>Behind the Work</em></h1>
+  <div class="hero-rule"></div>
+  <p>Decades of intellectual property experience, across law firms, courts, and the full spectrum of IP matters.</p>
+</div>
+
+<div class="section" style="background: white;">
+  <div class="section-inner">
+    <div class="prof-card">
+      <div>
+        <div class="prof-avatar">
+           <span> <img src="/NikImage.jpeg" alt="Profile Picture" class="avatar-img"></span>
+           <!--span class="prof-initials">N.E.N.</span> -->
+        </div>
+      </div>
+      <div>
+        <div class="prof-name">Nikitas E. Nicolakis</div>
+        <div class="prof-title">Principal · Patent Attorney</div>
+        <div class="prof-rule"></div>
+
+        <p class="prof-bio">Nikitas E. Nicolakis is an experienced patent attorney with a career spanning large multinational corporations, prominent New York law firms, and the public sector. He founded the Law Offices of Nikitas E. Nicolakis to deliver sophisticated intellectual property counsel with the focused attention that only a boutique practice can provide.</p>
+
+        <p class="prof-bio">Nikitas specializes in patent prosecution — both domestic and international — as well as infringement and validity opinions. His practice encompasses the full range of intellectual property law, including trademarks, copyright, trade secrets, IP licensing, antitrust, and federal and state matters. He also serves as Of Counsel at Lombard &amp; Geliebter LLP in New York.</p>
+
+        <p class="prof-bio">Prior to establishing his own practice, Nikitas served for nearly a decade as an Assistant District Attorney in Rockland County, including several years as Supervising ADA — an experience that sharpened his instincts for litigation strategy and advocacy. Earlier in his career, he held associate positions at Hamilton, Brook, Smith &amp; Reynolds; Lowenstein Sandler; Chadbourne &amp; Parke; and Ostrow Kaufman (formerly the Dreier LLP Patent Group), where he developed expertise in patent prosecution, licensing, and transactional IP matters.</p>
+
+        <p class="prof-bio">Nikitas holds a J.D. from New York Law School, where he was a member of the Institute for Information Law &amp; Policy, focusing on intellectual property and patent law. He also conducted student research at the Berkman Center for Internet &amp; Society at Harvard Law School, concentrating on intellectual property, copyright, and digital media. He earned his B.S. in Computer Science from Northeastern University — a technical foundation that proves invaluable in understanding and prosecuting complex inventions.</p>
+
+        <div class="credential-grid">
+          <div>
+            <div class="credential-label">Education</div>
+            <div class="credential-item">J.D. · New York Law School, 2006</div>
+            <div class="credential-item">Berkman Center, Harvard Law School · Research Fellow, 2005</div>
+            <div class="credential-item">B.S. Computer Science · Northeastern University, 2002</div>
+          </div>
+          <div>
+            <div class="credential-label">Experience</div>
+            <div class="credential-item">Law Offices of Nikitas E. Nicolakis · Principal, 2022–Present</div>
+            <div class="credential-item">Lombard &amp; Geliebter LLP · Of Counsel, 2022–Present</div>
+            <div class="credential-item">Rockland County DA · Supervising ADA, 2020–2022</div>
+            <div class="credential-item">Rockland County DA · ADA, 2013–2022</div>
+            <div class="credential-item">Hamilton, Brook, Smith &amp; Reynolds · Associate, 2012–2013</div>
+            <div class="credential-item">Lowenstein Sandler PC · Associate, 2011–2012</div>
+            <div class="credential-item">Chadbourne &amp; Parke LLP · Associate, 2010–2011</div>
+            <div class="credential-item">Ostrow Kaufman (fka Dreier LLP) · Associate, 2008–2010</div>
+            <div class="credential-item">Peter S. Canelias / Dunnegan LLC · Associate, 2006–2008</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Law Offices of Nikitas E. Nicolakis &nbsp;|&nbsp; Attorney Advertising &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Disclaimer</a></p>
+</footer>
+
+</body>
+</html>
