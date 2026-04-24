@@ -103,47 +103,45 @@
 
       <div>
         <!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://formspree.io/f/xbdqwlkn"
-  method="POST">
-        <div class="section-label">Send a Message</div>
-        <h2 class="section-title">Start the <em>Conversation</em></h2>
-        <div class="divider"></div>
-        <div class="contact-form">
-          <div class="form-group">
-            <label class="form-label">Full Name</label>
-            <input type="text" class="form-input" placeholder="Your name">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Email Address</label>
-            <input type="email" class="form-input" placeholder="your@email.com">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Organization (Optional)</label>
-            <input type="text" class="form-input" placeholder="Company or firm name">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Matter Type</label>
-            <select class="form-input" style="appearance: none; cursor: pointer;">
-              <option value="">Select a practice area</option>
-              <option>Patent Prosecution</option>
-              <option>Infringement / Validity Opinion</option>
-              <option>International / Foreign Filing</option>
-              <option>Trademark</option>
-              <option>Copyright</option>
-              <option>Trade Secrets</option>
-              <option>IP Licensing</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Message</label>
-            <textarea class="form-textarea" placeholder="Briefly describe your matter or question..."></textarea>
-          </div>
-          <button class="btn">Send Message</button>
-          <p style="font-size: 0.78rem; color: #999; line-height: 1.7;">Submitting this form does not create an attorney-client relationship. Please do not include confidential information in your initial inquiry.</p>
-        </div>
-        </form>
+<form action="https://formspree.io/f/xbdqwlkn" method="POST">
+  <div class="section-label">Send a Message</div>
+  <h2 class="section-title">Start the <em>Conversation</em></h2>
+  <div class="divider"></div>
+  <div class="contact-form">
+    <div class="form-group">
+      <label class="form-label">Full Name</label>
+      <input type="text" name="name" class="form-input" placeholder="Your name" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Email Address</label>
+      <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Organization (Optional)</label>
+      <input type="text" name="organization" class="form-input" placeholder="Company or firm name">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Matter Type</label>
+      <select name="matter_type" class="form-input" style="appearance: none; cursor: pointer;" required>
+        <option value="">Select a practice area</option>
+        <option>Patent Prosecution</option>
+        <option>Infringement / Validity Opinion</option>
+        <option>International / Foreign Filing</option>
+        <option>Trademark</option>
+        <option>Copyright</option>
+        <option>Trade Secrets</option>
+        <option>IP Licensing</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Message</label>
+      <textarea name="message" class="form-textarea" placeholder="Briefly describe your matter or question..." required></textarea>
+    </div>
+    <button class="btn">Send Message</button>
+    <p style="font-size: 0.78rem; color: #999; line-height: 1.7;">Submitting this form does not create an attorney-client relationship. Please do not include confidential information in your initial inquiry.</p>
+  </div>
+</form>
       </div>
 
     </div>
